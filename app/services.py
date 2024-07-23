@@ -2,6 +2,7 @@ import logging
 import requests
 import time
 from typing import Union, Dict
+import os
 
 class DocumentIntelligenceService:
     """
@@ -13,8 +14,8 @@ class DocumentIntelligenceService:
         """
         Initialize the DocumentIntelligenceService with API credentials and endpoint.
         """
-        self.key = 'dcf3addbf075440f927f5244a0bdf620' # document_intelligence.api_key
-        self.endpoint = 'https://test-doc-int-1607.cognitiveservices.azure.com/' # document_intelligence.endpoint
+        self.key = os.getenv('DOC_INTELLIGENCE_KEY') # document_intelligence.api_key
+        self.endpoint = 'https://doc-intell-ocr-app.cognitiveservices.azure.com/' # document_intelligence.endpoint
         self.api_version = "2024-02-29-preview"  # Currently only available in East US, West US2, and West Europe
 
     def analyze(
