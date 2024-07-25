@@ -15,7 +15,7 @@ class DocumentIntelligenceService:
         Initialize the DocumentIntelligenceService with API credentials and endpoint.
         """
         self.key = os.getenv('DOC_INTELLIGENCE_KEY') # document_intelligence.api_key
-        self.endpoint = 'https://doc-intell-ocr-app.cognitiveservices.azure.com/' # document_intelligence.endpoint
+        self.endpoint = os.getenv('DOC_INTELLIGENCE_ENDPOINT') # document_intelligence.endpoint
         self.api_version = "2024-02-29-preview"  # Currently only available in East US, West US2, and West Europe
 
     def analyze(
