@@ -3,7 +3,6 @@ from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from app.routes import gpt_ocr, upload
 
-logging.basicConfig(filename='logs/app.log', level=logging.INFO)
 
 app = FastAPI()
 
