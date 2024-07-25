@@ -27,6 +27,8 @@ jobs:
           python -m venv venv
           source venv/bin/activate
       
+      - name: Install uvicorn
+        run: pip install uvicorn 
       - name: Install dependencies
         run: pip install -r requirements.txt
         
